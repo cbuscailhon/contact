@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christine Buscailhon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a1a;
+      --paper: #f5f0e8;
+      --accent: #c8502a;
+      --muted: #7a7060;
+      --border: #d4cfc4;
+    }
+
+    html, body {
+      min-height: 100vh;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      min-height: 100vh;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 2.5rem 2rem 2rem;
+      position: relative;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      right: -6px;
+      bottom: -6px;
+      border: 1px solid var(--border);
+      z-index: -1;
+    }
+
+    .eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 0.6rem;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.55;
+      border-left: 2px solid var(--accent);
+      padding-left: 0.8rem;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 1.5rem;
+    }
+
+    .contacts {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .contacts li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.88rem;
+    }
+
+    .contacts .icon {
+      width: 28px;
+      height: 28px;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+
+    .contacts a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .contacts a:hover { color: var(--accent); }
+
+    .btn-primary {
+      display: block;
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 0.9rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-bottom: 1rem;
+    }
+    .btn-primary:hover { background: #a83e1f; }
+
+    .newsletter-block {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      text-align: center;
+    }
+
+    .newsletter-block p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 0.9rem;
+    }
+
+    .newsletter-block strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      padding: 0.7rem 1.4rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .footer {
+      margin-top: 2.5rem;
+      font-size: 0.72rem;
+      color: var(--border);
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <p class="eyebrow">Consultante Marketing Stratégique</p>
+    <h1 class="name">Christine<br>Buscailhon</h1>
+    <p class="tagline">J'aide les solopreneures expertes à construire la clarté qui manque : sur leur cible, leur contenu, leur système.</p>
+
+    <div class="divider"></div>
+
+    <ul class="contacts">
+      <li>
+        <span class="icon">✆</span>
+        <a href="tel:+33638647674">06 38 64 76 74</a>
+      </li>
+      <li>
+        <span class="icon">@</span>
+        <a href="mailto:christine@christinebuscailhon.fr">christine@christinebuscailhon.fr</a>
+      </li>
+      <li>
+        <span class="icon">↗</span>
+        <a href="https://christinebuscailhon.fr" target="_blank">christinebuscailhon.fr</a>
+      </li>
+    </ul>
+
+    <a class="btn-primary" href="https://raw.githubusercontent.com/cbuscailhon/contact/main/christine-buscailhon.vcf" download="Christine-Buscailhon.vcf">
+      📲 Enregistrer mon contact
+    </a>
+
+    <div class="newsletter-block">
+      <p>Chaque semaine, <strong>Celles qui durent</strong> :<br>une règle, une décision 80/20, un système clair.<br>Pour dépasser les 3K/mois sans se disperser.</p>
+      <a class="btn-secondary" href="https://christinebuscailhon.substack.com/subscribe" target="_blank">
+        S'abonner à la newsletter →
+      </a>
+    </div>
+  </div>
+
+  <p class="footer">© Christine Buscailhon — Toulouse</p>
+
+</body>
+</html>
