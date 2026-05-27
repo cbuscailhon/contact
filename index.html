@@ -205,9 +205,37 @@
       </li>
     </ul>
 
-    <a class="btn-primary" href="https://raw.githubusercontent.com/cbuscailhon/contact/main/christine-buscailhon.vcf" download="Christine-Buscailhon.vcf">
+    <button class="btn-primary" onclick="downloadVCard()">
       📲 Enregistrer mon contact
-    </a>
+    </button>
+
+    <script>
+    function downloadVCard() {
+      var vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'FN:Christine Buscailhon',
+        'N:Buscailhon;Christine;;;',
+        'TITLE:Consultante Marketing Strategique',
+        'ORG:Christine Buscailhon',
+        'NOTE:J aide les solopreneures expertes a construire la clarte qui manque.',
+        'TEL;TYPE=CELL:+33638647674',
+        'EMAIL;TYPE=WORK:christine@christinebuscailhon.fr',
+        'URL:https://christinebuscailhon.fr',
+        'END:VCARD'
+      ].join('\r\n');
+
+      var blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'Christine-Buscailhon.vcf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+    </script>
 
     <div class="newsletter-block">
       <p>Chaque semaine, <strong>Celles qui durent</strong> :<br>une règle, une décision 80/20, un système clair.<br>Pour dépasser les 3K/mois sans se disperser.</p>
